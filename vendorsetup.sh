@@ -61,9 +61,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1510672800"; # Tue Nov 14 15:20:00 GMT 2017
 	export FOX_ENABLE_APP_MANAGER=0
 	export FOX_DISABLE_APP_MANAGER=1
- export OF_OTA_RES_DECRYPT=1
- export OF_NO_RELOAD_AFTER_DECRYPTION=1
- export FOX_RESET_SETTINGS=disabled
+	export OF_NO_RELOAD_AFTER_DECRYPTION=1
+	export FOX_RESET_SETTINGS=disabled
 
         # use system (ROM) fingerprint where available
         export OF_USE_SYSTEM_FINGERPRINT=1
