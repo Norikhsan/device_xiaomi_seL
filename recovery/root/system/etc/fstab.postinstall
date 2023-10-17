@@ -19,3 +19,7 @@
 #<src>                    <mnt_point>  <type> <mnt_flags and options> <fs_mgr_flags>
 system                    /postinstall ext4   ro,nosuid,nodev,noexec  slotselect_other,logical
 /dev/block/by-name/system /postinstall ext4   ro,nosuid,nodev,noexec  slotselect_other
+
+#<src>                    <mnt_point>  <type> <mnt_flags and options> <fs_mgr_flags>
+system                    /postinstall emmc   ro,nosuid,nodev,noexec  slotselect_other,logical
+/dev/block/by-name/system /postinstall emmc   ro,nosuid,nodev,noexec  slotselect_other
