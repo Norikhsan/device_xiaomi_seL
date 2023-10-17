@@ -183,4 +183,6 @@ TARGET_USES_LOGD := true
 TW_INCLUDE_FB2PNG := true
 
 # TW Version
-TW_DEVICE_VERSION := selene
+ifeq ($(TW_DEVICE_VERSION),)
+TW_DEVICE_VERSION=12.0
+endif
