@@ -34,17 +34,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
-    lk \
-    logo \
-    md1img \
-    preloader \
     product \
-    scp \
-    spmfw \
-    sspm \
     system \
-    tee \
+    system_ext \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
