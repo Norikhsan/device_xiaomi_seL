@@ -21,21 +21,12 @@ LOCAL_PATH := device/xiaomi/selene
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
-    lk \
-    logo \
-    md1img \
-    preloader \
-    product \
-    scp \
-    spmfw \
-    sspm \
+    vendor \ 
+    product \ 
     system \
-    tee \
-    vbmeta \
+    syatem_ext \ 
     vbmeta_system \
-    vbmeta_vendor \
-    vendor
+    vbmeta_vendor 
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -49,15 +40,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Dynam
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 30
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31
 
 # Health Hal
 PRODUCT_PACKAGES += \
