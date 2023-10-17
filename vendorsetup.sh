@@ -72,7 +72,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
         # -- add settings for R12.1 --
-        export FOX_R12.1=1
         export OF_MAINTAINER="Norikhsan"
         export FOX_BUILD_TYPE="selene"
         
