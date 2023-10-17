@@ -68,5 +68,13 @@ PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
      libhealthd.$(PRODUCT_PLATFORM)
-    
+
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libpuresoftkeymasterdevice
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
+   
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) 
