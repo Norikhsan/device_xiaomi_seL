@@ -21,12 +21,6 @@ LOCAL_PATH := device/xiaomi/selene
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 30
-
 # V A/B
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -34,21 +28,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
-    lk \
-    logo \
-    md1img \
-    preloader \
+    vendor \
     product \
-    scp \
-    spmfw \
-    sspm \
     system \
-    tee \
-    vbmeta \
     vbmeta_system \
-    vbmeta_vendor \
-    vendor
+    vbmeta_vendor 
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -76,7 +60,6 @@ PRODUCT_PACKAGES += \
     
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
     
