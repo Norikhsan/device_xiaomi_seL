@@ -143,6 +143,8 @@ TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true 
 
 # Additional binaries & libraries needed for recovery
 TARGET_RECOVERY_DEVICE_MODULES += \
@@ -181,4 +183,4 @@ TARGET_USES_LOGD := true
 TW_INCLUDE_FB2PNG := true
 
 # TW Version
-TW_DEVICE_VERSION := KeongBalap™ 
+TW_DEVICE_VERSION := selene
