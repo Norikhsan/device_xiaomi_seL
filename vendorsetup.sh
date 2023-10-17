@@ -84,7 +84,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	# R11.1 Settings
 	export FOX_VERSION="R12.1_0"
-	export FOX_VARIANT="A12"
+	export FOX_VARIANT="selene"
 	export OF_MAINTAINER="Norikhsan"
 
  # senter
