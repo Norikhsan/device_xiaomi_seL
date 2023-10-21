@@ -1,21 +1,35 @@
-   # Crypto  
-   ro.crypto.volume.filenames_mode=aes-256-cts   
+ # Crypto  
+ ro.crypto.volume.filenames_mode=aes-256-cts   
   
-   # TEE  
-   ro.mtk_tee_gp_support=1  
-   ro.mtk_microtrust_tee_support=1  
+ # TEE  
+ ro.mtk_tee_gp_support=1  
+ ro.mtk_microtrust_tee_support=1  
   
-   # FBE  
-   fbe.metadata.wrappedkey=true  
+ # Gatekeeper  
+ ro.hardware.gatekeeper=beanpod  
   
-   # Gatekeeper  
-   ro.hardware.gatekeeper=beanpod  
+ # Kmsetkey  
+ ro.hardware.kmsetkey=beanpod  
   
-   # Kmsetkey  
-   ro.hardware.kmsetkey=beanpod  
+ # Gatekeeper, Encryption 
+ fbe.metadata.wrappedkey=true 
+ vendor.gatekeeper.disable_spu=true 
   
-   # Charger suspend    
-   ro.charger.enable_suspend=1   
+ # Platform 
+ ro.display.series=Redmi 10
+ ro.board.platform=selene
   
-   # ADB   
-   ro.adb.secure=0
+ # FUSE passthrough 
+ persist.sys.fuse.passthrough.enable=true 
+  
+ # Virtual A/B 
+ ro.virtual_ab.enabled=true 
+  
+ # Dynamic Partitions 
+ ro.boot.dynamic_partitions=true 
+  
+ # Charger suspend  
+ ro.charger.enable_suspend=1 
+  
+ # ADB 
+ ro.adb.secure=0
