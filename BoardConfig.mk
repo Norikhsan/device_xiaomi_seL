@@ -49,7 +49,6 @@ TARGET_USES_64_BIT_BINDER := true
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user
-BOARD_KERNEL_CMDLINE += androidboot.force_normal_boot=1
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
@@ -57,7 +56,6 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-BOARD_KERNEL_SEPERATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/selene
 TARGET_KERNEL_CONFIG := selene_defconfig
@@ -148,7 +146,6 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
  
 # System Properties 
  TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
- TW_HAS_NO_RECOVERY_PARTITION := true
 
 # TWRP Configuration
 RECOVERY_SDCARD_ON_DATA := true
@@ -164,8 +161,3 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
 
 # TW Screenshot
  TW_INCLUDE_FB2PNG := true
-
-#MIUI 12.xx A11 DECRYPTION
-BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
-    --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
-    --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
