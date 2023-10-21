@@ -106,8 +106,11 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_USES_MTK_HARDWARE := true
 BOARD_HAS_MTK_HARDWARE := true
 
-# Verified Boot 
-BOARD_AVB_ENABLE := true 
+# Verified Boot
+BOARD_AVB_ENABLE := true
+
+# VNDK Treble
+BOARD_VNDK_VERSION := current
 
 # Metadata 
 BOARD_USES_METADATA_PARTITION := true 
