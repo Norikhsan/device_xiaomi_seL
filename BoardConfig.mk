@@ -95,6 +95,10 @@ $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-l
  TARGET_COPY_OUT_SYSTEM_EXT := system_ext
  TARGET_COPY_OUT_PRODUCT    := product
 
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Use LZ4 Ramdisk compression instead of GZIP 
  BOARD_RAMDISK_USE_LZ4 := true
 
