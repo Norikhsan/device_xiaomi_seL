@@ -146,12 +146,8 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
  TW_HAS_NO_RECOVERY_PARTITION := true
 
 # TWRP Configuration
-TW_FRAMERATE := 60
-TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXTRA_LANGUAGES := true
-TW_INCLUDE_NTFS_3G := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 
 # TWRP Configuration 
@@ -162,7 +158,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
  TARGET_USES_LOGD := true 
 
 # TW Screenshot
-TW_INCLUDE_FB2PNG := true
+ TW_INCLUDE_FB2PNG := true
 
 #MIUI 12.xx A11 DECRYPTION
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
