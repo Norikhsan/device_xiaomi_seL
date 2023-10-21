@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-recovery \
     android.hardware.boot@1.1-impl \
-    android.hardware.boot@1.1-service \
+    android.hardware.boot@1.1-service
 
  # Update engine
 PRODUCT_PACKAGES += \
@@ -50,10 +50,7 @@ PRODUCT_PACKAGES += \
 # Health Hal
 PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
-     android.hardware.health@2.1-service \
-
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
-            $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
+     android.hardware.health@2.1-service 
 
 # enable USB Storage
  TW_NO_USB_STORAGE := false
@@ -90,5 +87,3 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
  TW_HAS_EDL_MODE         := true 
  TW_INCLUDE_FASTBOOTD    := true 
  TWRP_INCLUDE_LOGCAT     := true
-
-
