@@ -87,9 +87,8 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5696502916 # TODO: Fix hardcoded value
 
+# Workaround for error copying vendor files to recovery ramdisk 
  BOARD_USES_PRODUCTIMAGE := true
-  
- # Workaround for error copying vendor files to recovery ramdisk 
  TARGET_COPY_OUT_PRODUCT := product
  TARGET_COPY_OUT_VENDOR := vendor
  TARGET_COPY_OUT_SYSTEM_EXT = system_ext
