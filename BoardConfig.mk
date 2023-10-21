@@ -92,10 +92,6 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5696502916 # TODO: Fix hardcoded value
  TARGET_COPY_OUT_VENDOR := vendor
  TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
-# Despite being VA/B device, there is a dedicated recovery partition 
- BOARD_SUPPRESS_SECURE_ERASE := true
- BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := false 
-
 # Use LZ4 Ramdisk compression instead of GZIP 
  BOARD_RAMDISK_USE_LZ4 := true
 
