@@ -30,12 +30,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-recovery \
     android.hardware.boot@1.1-impl \
     android.hardware.boot@1.1-service \
-    bootctrl.$(PRODUCT_PLATFORM).recovery
 
  # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
-    cppreopts.sh \
     update_engine_sideload \
     update_verifier \
     checkpoint_gc
@@ -53,7 +51,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
-     libhealthd.$(PRODUCT_PLATFORM)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \
             $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
@@ -66,7 +63,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
 
 # Display Size & Density 
  TARGET_SCREEN_HEIGHT  := 2400 
- TARGET_SCREEN_DENSITY := 395 
+ TARGET_SCREEN_DENSITY := 405 
  TARGET_SCREEN_WIDTH   := 1080
 
  TW_BATTERY_SYSFS_WAIT_SECONDS := 6 
@@ -93,3 +90,5 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/roo
  TW_HAS_EDL_MODE         := true 
  TW_INCLUDE_FASTBOOTD    := true 
  TWRP_INCLUDE_LOGCAT     := true
+
+
