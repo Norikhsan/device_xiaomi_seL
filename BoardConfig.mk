@@ -161,30 +161,8 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
  # Debug 
  TARGET_USES_LOGD := true 
 
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 1200
-TW_Y_OFFSET := 80
-TW_H_OFFSET := -80
-TARGET_USES_MKE2FS := true
-TW_EXCLUDE_TWRPAPP := true
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_HAS_MTP := true
-TW_INCLUDE_REPACKTOOLS := true
-BOARD_USES_MTK_HARDWARE := true
-
-# logcd
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-
 # TW Screenshot
 TW_INCLUDE_FB2PNG := true
-
-# TW Version
-ifeq ($(TW_DEVICE_VERSION),)
-TW_DEVICE_VERSION=12.0
-endif
-
 
 #MIUI 12.xx A11 DECRYPTION
 BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
@@ -192,12 +170,4 @@ BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
     --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 
 
-# Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libpuresoftkeymasterdevice
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-    
