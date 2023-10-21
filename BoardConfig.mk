@@ -59,8 +59,9 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPERATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-TARGET_KERNEL_CONFIG    := ruby_defconfig 
-TARGET_KERNEL_SOURCE   := kernel/xiaomi/ruby
+TARGET_KERNEL_SOURCE := kernel/xiaomi/selene
+TARGET_KERNEL_CONFIG := selene_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
