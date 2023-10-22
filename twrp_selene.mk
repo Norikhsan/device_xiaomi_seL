@@ -17,14 +17,20 @@
 #
 
  # Inherit from those products 
- $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk) 
- $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk) 
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk) 
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk) 
   
  # Inherit from hardware-specific part of the product configuration
   $(call inherit-product, device/xiaomi/selene/device.mk)
 
+ # Enable developer GSI keys 
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk) 
+  
+ # Configure emulated_storage.mk 
+  $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
  # Inherit from our custom product configuration
-  $(call inherit-product, vendor/twrp/config/common.mk)
+   $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := selene
