@@ -21,7 +21,7 @@
  PRODUCT_USE_DYNAMIC_PARTITIONS := true 
   
  # VNDK 
- PRODUCT_TARGET_VNDK_VERSION := 30 
+ PRODUCT_TARGET_VNDK_VERSION := 32 
   
  # API 
  PRODUCT_SHIPPING_API_LEVEL := 30 
@@ -40,16 +40,6 @@
  PRODUCT_PACKAGES += \
      bootctrl.selene.recovery 
   
- PRODUCT_PACKAGES_DEBUG += \ 
-     update_engine_client 
-  
- PRODUCT_PACKAGES += \ 
-     otapreopt_script \ 
-     cppreopts.sh \ 
-     update_engine \ 
-     update_verifier \ 
-     update_engine_sideload 
-  
  # Fastbootd 
  PRODUCT_PACKAGES += \ 
      android.hardware.fastboot@1.0-impl-mock \ 
@@ -65,6 +55,16 @@
  # lptool 
  PRODUCT_PACKAGES += \ 
      lptools 
+
+PRODUCT_PACKAGES += \ 
+     otapreopt_script \ 
+     cppreopts.sh \ 
+     update_engine \ 
+     update_verifier \ 
+     update_engine_sideload 
+
+PRODUCT_PACKAGES_DEBUG += \ 
+     update_engine_client 
 
 # enable USB Storage
  TW_NO_USB_STORAGE := false
