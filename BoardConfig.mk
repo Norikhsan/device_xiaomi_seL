@@ -114,9 +114,6 @@ BOARD_USES_METADATA_PARTITION := true
 TARGET_USERIMAGES_USE_EXT4 := true 
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
-
 # Recovery 
  TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
  TARGET_NO_RECOVERY := true  
