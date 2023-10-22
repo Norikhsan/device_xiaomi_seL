@@ -37,11 +37,8 @@
      POSTINSTALL_OPTIONAL_system=true 
   
  # Boot control HAL 
- PRODUCT_PACKAGES += \ 
-     android.hardware.boot@1.1-impl-recovery \ 
-     android.hardware.boot@1.1-impl \ 
-     android.hardware.boot@1.1-service \ 
-     bootctrl.$(PRODUCT_PLATFORM).recovery 
+ PRODUCT_PACKAGES += \
+     bootctrl.ruby.recovery 
   
  PRODUCT_PACKAGES_DEBUG += \ 
      update_engine_client 
