@@ -83,14 +83,13 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5696502916 # TODO: Fix hardcoded value
 
-BOARD_PARTITION_LIST := $(call to-upper, $(BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST))
-$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4))
-$(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
-
-# Workaround for error copying vendor files to recovery ramdisk 
- BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
- TARGET_COPY_OUT_SYSTEM_EXT := system_ext
- TARGET_COPY_OUT_PRODUCT    := product
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_SYSTEM := system
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_PRODUCT    := product
 
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -99,12 +98,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Use LZ4 Ramdisk compression instead of GZIP 
  BOARD_RAMDISK_USE_LZ4 := true
 
-# Platform 
-BOARD_USES_MTK_HARDWARE := true
-BOARD_HAS_MTK_HARDWARE := true
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # VNDK Treble
 BOARD_VNDK_VERSION := current
@@ -128,7 +124,7 @@ TARGET_USERIMAGES_USE_F2FS := true
  # Security patch level 
   PLATFORM_SECURITY_PATCH      := 2099-12-31
   VENDOR_SECURITY_PATCH        := 2099-12-31
-  PLATFORM_VERSION             := 13
+  PLATFORM_VERSION             := 13.0
   PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
  # Encryption
