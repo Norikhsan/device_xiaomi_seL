@@ -19,4 +19,5 @@
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/twrp_selene.mk
      
-COMMON_LUNCH_CHOICES := twrp_selene-eng
+COMMON_LUNCH_CHOICES := \
+     twrp_selene-eng
