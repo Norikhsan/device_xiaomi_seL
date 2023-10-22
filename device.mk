@@ -1,12 +1,6 @@
 #
 # Inherit from the common Open Source product configuration
 
-# Enable developer GSI keys 
- $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk) 
-  
- # Configure emulated_storage.mk 
- $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 LOCAL_PATH := device/xiaomi/selene
 
 #SHIPPING API
