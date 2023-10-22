@@ -18,7 +18,7 @@
 
  # Inherit from those products 
  $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk) 
- $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk) 
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk) 
   
  # Inherit from hardware-specific part of the product configuration
   $(call inherit-product, device/xiaomi/selene/device.mk)
