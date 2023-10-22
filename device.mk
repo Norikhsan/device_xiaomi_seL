@@ -59,11 +59,7 @@ PRODUCT_PACKAGES += \
 
  TW_BATTERY_SYSFS_WAIT_SECONDS := 6 
  TW_EXCLUDE_DEFAULT_USB_INIT   := true 
- TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
   
-# Soong namespaces 
- PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH) 
- 
 # TWRP - Specifics 
  TW_THEME                := portrait_hdpi 
  TW_USE_TOOLBOX          := true 
