@@ -38,7 +38,7 @@
   
  # Boot control HAL 
  PRODUCT_PACKAGES += \
-     bootctrl.ruby.recovery 
+     bootctrl.selene.recovery 
   
  PRODUCT_PACKAGES_DEBUG += \ 
      update_engine_client 
