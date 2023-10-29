@@ -21,7 +21,7 @@
  PRODUCT_USE_DYNAMIC_PARTITIONS := true 
   
  # VNDK 
- PRODUCT_TARGET_VNDK_VERSION := 32 
+ PRODUCT_TARGET_VNDK_VERSION := 30
   
  # API 
  PRODUCT_SHIPPING_API_LEVEL := 30 
@@ -85,34 +85,5 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
 
-# enable USB Storage
- TW_NO_USB_STORAGE := false
-
-# set refreshrate
- TW_FRAMERATE := 60
-
-# Display Size & Density 
- TARGET_SCREEN_HEIGHT  := 2400 
- TARGET_SCREEN_DENSITY := 405 
- TARGET_SCREEN_WIDTH   := 1080
-
- TW_BATTERY_SYSFS_WAIT_SECONDS := 6 
- TW_EXCLUDE_DEFAULT_USB_INIT   := true 
-  
-# TWRP - Specifics 
- TW_THEME                := portrait_hdpi 
- TW_USE_TOOLBOX          := true 
- TW_INCLUDE_NTFS_3G      := true 
- TW_INCLUDE_FUSE_EXFAT   := true 
- TW_INCLUDE_FUSE_NTFS    := true 
- TW_INCLUDE_REPACKTOOLS  := true 
- TW_INCLUDE_RESETPROP    := true 
- TW_INCLUDE_LIBRESETPROP := true 
- TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
- TW_MAX_BRIGHTNESS       := 2047 
- TW_EXTRA_LANGUAGES      := true 
- TW_DEFAULT_BRIGHTNESS   := 200 
- TW_EXCLUDE_APEX         := true 
- TW_HAS_EDL_MODE         := true 
- TW_INCLUDE_FASTBOOTD    := true 
- TWRP_INCLUDE_LOGCAT     := true
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \ 
+             $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
