@@ -53,6 +53,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-mtkimpl
 
 PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
+
+PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 PRODUCT_PACKAGES += \
@@ -72,12 +75,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
-     libhealthd.$(PRODUCT_PLATFORM)
 
-#TARGET_RECOVERY_DEVICE_MODULES += \
+TARGET_RECOVERY_DEVICE_MODULES += \ 
     libkeymaster4 \
     libpuresoftkeymasterdevice
 
-RECOVERY_LIBRARY_SOURCE_FILES += \
+RECOVERY_LIBRARY_SOURCE_FILES += \ 
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
