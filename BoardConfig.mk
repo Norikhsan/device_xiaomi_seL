@@ -136,12 +136,47 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 
+# Additional binaries & libraries needed for recovery 
+ TARGET_RECOVERY_DEVICE_MODULES += \ 
+     libkeymaster4 \ 
+     libpuresoftkeymasterdevice 
+  
+ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \ 
+     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \ 
+     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
+
 # TWRP Configuration 
  TW_NO_SCREEN_BLANK := true 
  TW_NO_SCREEN_TIMEOUT := true
   
  # Debug 
- TARGET_USES_LOGD := true 
+ TARGET_USES_LOGD        := true 
+ TWRP_INCLUDE_LOGCAT     := true
 
 # TW Screenshot
  TW_INCLUDE_FB2PNG := true
+
+# enable USB Storage
+ TW_NO_USB_STORAGE := false
+
+# set refreshrate
+ TW_FRAMERATE := 60
+
+# Display Size & Density 
+ TARGET_SCREEN_HEIGHT  := 2400 
+
+# TWRP - Specifics 
+ TW_THEME                := portrait_hdpi 
+ TW_USE_TOOLBOX          := true 
+ TW_INCLUDE_NTFS_3G      := true 
+ TW_INCLUDE_FUSE_EXFAT   := true 
+ TW_INCLUDE_FUSE_NTFS    := true 
+ TW_INCLUDE_REPACKTOOLS  := true 
+ TW_INCLUDE_RESETPROP    := true 
+ TW_INCLUDE_LIBRESETPROP := true 
+ TW_BRIGHTNESS_PATH      := "/sys/class/leds/lcd-backlight/brightness"
+ TW_MAX_BRIGHTNESS       := 2047 
+ TW_EXTRA_LANGUAGES      := true 
+ TW_DEFAULT_BRIGHTNESS   := 200 
+ TW_EXCLUDE_APEX         := true 
+ TW_INCLUDE_FASTBOOTD    := true 
