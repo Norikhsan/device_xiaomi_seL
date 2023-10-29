@@ -47,10 +47,13 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL 
- PRODUCT_PACKAGES += \ 
-     android.hardware.boot@1.1-mtkimpl.recovery \ 
-     android.hardware.boot@1.1-mtkimpl 
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-mtkimpl.recovery \
+    android.hardware.boot@1.1-mtkimpl
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -72,6 +75,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
+     libhealthd.$(PRODUCT_PLATFORM)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root) \ 
              $(LOCAL_PATH)/prebuilt/dtb.img:dtb.img
