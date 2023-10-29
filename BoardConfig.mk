@@ -135,15 +135,6 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 
-# Additional binaries & libraries needed for recovery 
- TARGET_RECOVERY_DEVICE_MODULES += \ 
-     libkeymaster4 \ 
-     libpuresoftkeymasterdevice 
-  
- TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \ 
-     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \ 
-     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
-
 # TWRP Configuration 
  TW_NO_SCREEN_BLANK := true 
  TW_NO_SCREEN_TIMEOUT := true
