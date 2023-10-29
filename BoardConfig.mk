@@ -123,7 +123,6 @@ TARGET_USERIMAGES_USE_F2FS := true
  TW_INCLUDE_CRYPTO := true
  TW_INCLUDE_CRYPTO_FBE := true
  TW_INCLUDE_FBE_METADATA_DECRYPT := true
- BOARD_USES_METADATA_PARTITION := true
  
 # Extras
  TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -155,9 +154,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.
 
 # TW Screenshot
  TW_INCLUDE_FB2PNG := true
-
-# enable USB Storage
- TW_NO_USB_STORAGE := false
 
 # set refreshrate
  TW_FRAMERATE := 60
