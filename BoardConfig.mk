@@ -50,7 +50,6 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/selene
 TARGET_KERNEL_CONFIG := selene_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
