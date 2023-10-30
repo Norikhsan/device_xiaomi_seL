@@ -115,4 +115,3 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
  TW_EXCLUDE_APEX         := true 
  TW_HAS_EDL_MODE         := true 
  TW_INCLUDE_FASTBOOTD    := true 
- TWRP_INCLUDE_LOGCAT     := true
