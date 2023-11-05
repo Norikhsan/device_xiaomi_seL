@@ -33,6 +33,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# A/B
+PRODUCT_PACKAGES += \
+    otapreopt_script
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -45,15 +49,14 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-mtkimpl
     bootctrl.mt6768.recovery
 
+# Update Engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-PRODUCT_PACKAGES += \
-    otapreopt_script \
-    cppreopts.sh \
-    update_engine \
-    update_verifier \
-    update_engine_sideload
     
 # Fastbootd
 PRODUCT_PACKAGES += \
