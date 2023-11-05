@@ -132,8 +132,7 @@ TARGET_USERIMAGES_USE_F2FS := true
  TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
  
 # System Properties 
- TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc
-/recovery.fstab
+ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # TWRP Configuration
 RECOVERY_SDCARD_ON_DATA := true
