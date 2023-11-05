@@ -54,6 +54,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-mtkimpl.recovery \
     android.hardware.boot@1.1-mtkimpl
+    bootctrl.mt6768.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -68,7 +69,6 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
 # Health Hal
@@ -76,10 +76,11 @@ PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
 
+# Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
     libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
