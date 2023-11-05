@@ -82,14 +82,8 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
 
-# enable USB Storage
- TW_NO_USB_STORAGE := false
-
 # set refreshrate
  TW_FRAMERATE := 60
-
- TW_BATTERY_SYSFS_WAIT_SECONDS := 6 
- TW_EXCLUDE_DEFAULT_USB_INIT   := true 
   
 # TWRP - Specifics 
  TW_THEME                := portrait_hdpi 
@@ -105,5 +99,4 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
  TW_EXTRA_LANGUAGES      := true 
  TW_DEFAULT_BRIGHTNESS   := 200 
  TW_EXCLUDE_APEX         := true 
- TW_HAS_EDL_MODE         := true 
  TW_INCLUDE_FASTBOOTD    := true 
