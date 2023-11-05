@@ -72,6 +72,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
 	# screen settings
+        export OF_SCREEN_H=2400
 	export OF_ALLOW_DISABLE_NAVBAR=0 # We don't have physical buttons
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48
