@@ -75,7 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
      android.hardware.health@2.1-impl \
      android.hardware.health@2.1-service \
-     libhealthd.$(PRODUCT_PLATFORM)
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
@@ -84,22 +83,3 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so 
-
-# set refreshrate
- TW_FRAMERATE := 60
-  
-# TWRP - Specifics 
- TW_THEME                := portrait_hdpi 
- TW_USE_TOOLBOX          := true 
- TW_INCLUDE_NTFS_3G      := true 
- TW_INCLUDE_FUSE_EXFAT   := true 
- TW_INCLUDE_FUSE_NTFS    := true 
- TW_INCLUDE_REPACKTOOLS  := true 
- TW_INCLUDE_RESETPROP    := true 
- TW_INCLUDE_LIBRESETPROP := true 
- TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
- TW_MAX_BRIGHTNESS       := 2047 
- TW_EXTRA_LANGUAGES      := true 
- TW_DEFAULT_BRIGHTNESS   := 200 
- TW_EXCLUDE_APEX         := true 
- TW_INCLUDE_FASTBOOTD    := true 
