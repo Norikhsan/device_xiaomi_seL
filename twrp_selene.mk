@@ -23,12 +23,6 @@
  # Inherit from hardware-specific part of the product configuration
   $(call inherit-product, device/xiaomi/selene/device.mk)
 
- # Enable developer GSI keys 
-  $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk) 
-  
- # Configure emulated_storage.mk 
-  $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
  # Inherit from our custom product configuration
    $(call inherit-product, vendor/twrp/config/common.mk)
 
