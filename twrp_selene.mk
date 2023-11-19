@@ -16,15 +16,18 @@
 # limitations under the License.
 #
 
- # Inherit from those products 
-  $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk) 
-  $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk) 
-  
- # Inherit from hardware-specific part of the product configuration
-  $(call inherit-product, device/xiaomi/selene/device.mk)
+ # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
- # Inherit from our custom product configuration
-   $(call inherit-product, vendor/twrp/config/common.mk)
+# Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit from vida device
+$(call inherit-product, device/xiaomi/selene/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := selene
