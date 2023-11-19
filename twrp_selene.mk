@@ -31,7 +31,7 @@ $(call inherit-product, device/xiaomi/selene/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := selene
-PRODUCT_NAME := twrp_selene
+PRODUCT_NAME := omni_selene
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 21061119AG
 PRODUCT_MANUFACTURER := xiaomi
