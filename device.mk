@@ -28,6 +28,10 @@ PRODUCT_TARGET_VNDK_VERSION := 31
 
 # Virtual A/B
 ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # A/B
 PRODUCT_PACKAGES += \
