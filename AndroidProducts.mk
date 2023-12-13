@@ -17,7 +17,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_selene.mk
+     $(LOCAL_DIR)/twrp_selene.mk
      
 COMMON_LUNCH_CHOICES := \
-     omni_selene-eng
+     twrp_selene-eng
