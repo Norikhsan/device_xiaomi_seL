@@ -102,7 +102,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
                 # Backup
 		export OF_USE_TWRP_SAR_DETECT=1
                 export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
-                export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
+                export OF_QUICK_BACKUP_LIST="/boot;/data;"
 		export FOX_REPLACE_TOOLBOX_GETPROP=1
 
                 # run a process after formatting data to work-around MTP issues
