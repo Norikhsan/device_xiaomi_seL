@@ -84,9 +84,6 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 5696502916
 
-# Use LZ4 Ramdisk compression instead of GZIP 
- BOARD_RAMDISK_USE_LZ4 := true
-
 # System as Root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
