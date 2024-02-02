@@ -7,7 +7,6 @@ DEVICE_PATH := device/xiaomi/selene
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
